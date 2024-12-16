@@ -15,3 +15,10 @@ Vue 版本：<https://github.com/jdf2e/nutui-bingo>
 ## 进度
 
 - [x] GiftBox 神秘大礼盒
+
+## 开发
+
+```powershell
+nvm use 18
+pnpm install
+```

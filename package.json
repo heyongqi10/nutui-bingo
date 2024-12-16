@@ -1,85 +1,171 @@
 {
-	"name": "@xxhls/nutui-bingo-react",
-	"type": "module",
-	"version": "0.0.0",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"files": ["dist", "README.md"],
-	"exports": {
-		".": {
-			"import": {
-				"types": "./dist/index.d.ts",
-				"default": "./dist/index.js"
-			}
-		},
-		"./css": "./dist/style.css"
-	},
-	"scripts": {
-		"check": "biome check .",
-		"check:write": "biome check --write .",
-		"lint:css": "stylelint \"**/*.css\" --fix --ignore-path=.gitignore",
-		"format": "npm run lint:css && npm run check:write",
-		"build": "tsc && vite build",
-		"commit": "cz",
-		"commit:up-pkg": "git add . && git commit -m 'chore: update package.json'",
-		"commit:up-readme": "git add . && git commit -m 'chore: update README.md'",
-		"prepare": "husky",
-		"bump": "npm run bump:patch && npm run push:main",
-		"bump:patch": "npm version patch -m 'bump v%s'",
-		"release:patch": "npm run build && npm run bump && npm publish",
-		"push:main": "git push origin main && git push --tags",
-		"dev:demo": "cd packages/demo && npm run dev",
-		"dev:demo-dist": "npm run build && cp -r ./dist ./packages/demo-dist/src/ && cd packages/demo-dist && npm run dev",
-		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build",
-		"test:ui": "vitest run"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.3",
-		"@chromatic-com/storybook": "1.9.0",
-		"@storybook/addon-essentials": "8.3.5",
-		"@storybook/addon-interactions": "8.3.5",
-		"@storybook/addon-links": "8.3.5",
-		"@storybook/addon-onboarding": "8.3.5",
-		"@storybook/blocks": "8.3.5",
-		"@storybook/react": "8.3.5",
-		"@storybook/react-vite": "8.3.5",
-		"@storybook/test": "8.3.5",
-		"@swc/core-darwin-arm64": "1.7.30-nightly-20241002.1",
-		"@testing-library/jest-dom": "6.5.0",
-		"@testing-library/react": "16.0.1",
-		"@testing-library/user-event": "14.5.2",
-		"@types/node": "22.7.4",
-		"@types/react": "18.3.11",
-		"@types/react-dom": "18.3.0",
-		"@vitejs/plugin-react": "4.3.2",
-		"@vitejs/plugin-react-swc": "3.7.1",
-		"@vitest/coverage-v8": "^2.1.2",
-		"commitizen": "^4.3.1",
-		"cz-conventional-changelog": "3.3.0",
-		"globals": "15.9.0",
-		"husky": "^9.1.6",
-		"jsdom": "25.0.1",
-		"storybook": "^8.3.5",
-		"stylelint": "16.9.0",
-		"stylelint-config-standard": "36.0.1",
-		"stylelint-order": "6.0.4",
-		"typescript": "5.6.2",
-		"vite": "5.4.8",
-		"vite-plugin-dts": "4.2.3",
-		"vitest": "2.1.2"
-	},
-	"dependencies": {
-		"react": "18.3.1",
-		"react-dom": "18.3.1"
-	},
-	"peerDependencies": {
-		"react": "18.3.1",
-		"react-dom": "18.3.1"
-	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog"
-		}
-	}
+  "name": "@xxhls/nutui-bingo-react",
+  "type": "module",
+  "version": "0.0.0",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev:demo": "cd packages/demo && npm run dev",
+    "dev:demo-dist": "npm run build && cp -r ./dist ./packages/demo-dist/src/ && cd packages/demo-dist && npm run dev",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "build": "tsc && vite build",
+    "format": "stylelint \"**/*.css\" --fix --ignore-path=.gitignore && biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@swc/core-darwin-arm64": "1.7.30-nightly-20241002.1",
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.11",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.2",
+    "@vitejs/plugin-react-swc": "3.7.1",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "3.3.0",
+    "globals": "15.9.0",
+    "stylelint": "16.9.0",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-order": "6.0.4",
+    "typescript": "5.6.2",
+    "vite": "5.4.8",
+    "vite-plugin-dts": "4.2.3",
+    "vitepress": "^1.5.0"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "stylelint":{
+    "extends": "stylelint-config-standard",
+    "plugins": ["stylelint-order"],
+    "rules": {
+      "block-no-empty": true,
+      "color-hex-length": "long",
+      "selector-class-pattern": null,
+      "selector-type-no-unknown": [
+        true,
+        {
+          "ignoreTypes": []
+        }
+      ],
+      "selector-pseudo-element-no-unknown": [
+        true,
+        {
+          "ignorePseudoElements": ["v-deep"]
+        }
+      ],
+      "no-descending-specificity": null,
+      "at-rule-no-unknown": null,
+      "comment-no-empty": true,
+      "shorthand-property-no-redundant-values": true,
+      "value-no-vendor-prefix": true,
+      "property-no-vendor-prefix": true,
+      "order/properties-order": [
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "justify-content",
+        "align-items",
+        "float",
+        "clear",
+        "overflow",
+        "overflow-x",
+        "overflow-y",
+        "margin",
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left",
+        "border",
+        "border-style",
+        "border-width",
+        "border-color",
+        "border-top",
+        "border-top-style",
+        "border-top-width",
+        "border-top-color",
+        "border-right",
+        "border-right-style",
+        "border-right-width",
+        "border-right-color",
+        "border-bottom",
+        "border-bottom-style",
+        "border-bottom-width",
+        "border-bottom-color",
+        "border-left",
+        "border-left-style",
+        "border-left-width",
+        "border-left-color",
+        "border-radius",
+        "padding",
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left",
+        "width",
+        "min-width",
+        "max-width",
+        "height",
+        "min-height",
+        "max-height",
+        "font-size",
+        "font-family",
+        "font-weight",
+        "text-align",
+        "text-justify",
+        "text-indent",
+        "text-overflow",
+        "text-decoration",
+        "white-space",
+        "color",
+        "background",
+        "background-position",
+        "background-repeat",
+        "background-size",
+        "background-color",
+        "background-clip",
+        "opacity",
+        "filter",
+        "list-style",
+        "outline",
+        "visibility",
+        "box-shadow",
+        "text-shadow",
+        "resize",
+        "transition"
+      ]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "npmrc": {
+    "registry": "https://registry.npmmirror.com/",
+    "save-dev": true,
+    "save-exact": true
+  }
 }
