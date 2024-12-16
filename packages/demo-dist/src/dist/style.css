@@ -4,13 +4,15 @@
     background: url("https://img10.360buyimg.com/imagetools/jfs/t1/80308/16/17542/310729/613b20a9Ef0a4b640/85977b5e747213ca.png") no-repeat;
     background-size: 100% 100%;
 }
+
 .nutbig-giftBox_content {
     position: relative;
     display: block;
+    margin: 110px auto 0;
     width: 300px;
     height: 200px;
-    margin: 110px auto 0;
 }
+
 .nutbig-giftBox_cover {
     position: absolute;
     top: 20%;
@@ -20,39 +22,43 @@
     width: 63%;
     height: 35%;
     background: url('https://img11.360buyimg.com/imagetools/jfs/t1/79939/3/16076/28752/613b1610Edbfa9502/16bdec9244e231b0.png') no-repeat;
-    background-size: 100% 100%;
     background-position: center center;
+    background-size: 100% 100%;
     transition:all linear 0.6s;
 }
+
 .nutbig-giftBox_cover--active {
     margin: -26% 0 0 -27%;
     transform: rotateZ(22deg);
 }
+
 .nutbig-giftBox_box {
     top: 55%;
     left: 50%;
     z-index: 10;
-    transform: translate(-50%, -50%);
     width: 60%;
     height: 60%;
     background: url('https://img14.360buyimg.com/imagetools/jfs/t1/67459/8/17031/35435/613b1611E14f88d6d/276574386be58ddd.png') no-repeat;
-    background-size: 100% 100%;
     background-position: center center;
+    background-size: 100% 100%;
+    transform: translate(-50%, -50%);
 }
+
 .nutbig-giftBox_line {
     position: absolute;
     top: 0;
     left: 50%;
     z-index: 5;
-    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background: url('https://img12.360buyimg.com/imagetools/jfs/t1/206640/13/170/107814/613b1611E104d998f/0f570d559327b701.png') no-repeat;
-    background-size: 100% 100%;
     background-position: center center;
+    background-size: 100% 100%;
     opacity: 0;
     transition: all .3s linear 0.4s;
+    transform: translate(-50%, -50%);
 }
+
 .nutbig-giftBox_line--active {
     opacity: 1;
 }

@@ -1,27 +1,17 @@
-# react-component-library-template
+# NutUI-Bingo-React
 
-This is a template to create a react component libraries with Vite
+React 版本的 NutUI-Bingo 组件库
 
-## Features
+Vue 版本：<https://github.com/jdf2e/nutui-bingo>
 
-- React
-- TypeScript
-- Biome & Stylelint
-- Storybook
-- Vite
-- Vitest
-- Husky
-- Commitizen
+组件库模版：<https://github.com/xxhls/react-component-library-template>
 
-## Scripts
+## 特点
 
-- "format": format the code
-- "build": build the components
-- "bump": bump a patch version
-- "push:main": push history and tags
-- "dev:demo": run the demo
-![alt text](image.png)
-- "dev:demo-dist": run the demo-dist
-- "storybook": run the storybook
-![alt text](image-1.png)
-- "test:ui": run the vitest
+- 基于 React 18 + Typescript
+- Monorepo 管理组件库及 Demo 示例
+- 与 Vue 组件库完全匹配的 API
+
+## 进度
+
+- [x] GiftBox 神秘大礼盒
