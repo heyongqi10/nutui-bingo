@@ -20,9 +20,6 @@
   "scripts": {
     "dev": "cd packages/demo && npm run dev",
     "dev:dist": "npm run build && cd packages/demo-dist && npm run dev",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
     "build": "tsc && vite build",
     "format": "stylelint \"**/*.css\" --fix --ignore-path=.gitignore && biome check --write ."
   },
