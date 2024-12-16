@@ -1,5 +1,5 @@
 import "@tmp/design/css";
-import { Image } from "@tmp/design";
+import { GiftBox } from "@tmp/design";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
@@ -9,7 +9,7 @@ createRoot(root).render(
 	<StrictMode>
 		<div>
 			<h1>Hello, world!</h1>
-			<Image src="https://biomejs.dev/_astro/logo-light-transparent.D-4iVN_O.svg" />
+			<GiftBox />
 		</div>
 	</StrictMode>,
 );

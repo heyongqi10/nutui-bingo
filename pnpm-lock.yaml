@@ -123,7 +123,11 @@ importers:
 
   packages/demo-dist: {}
 
-  packages/design: {}
+  packages/design:
+    dependencies:
+      '@xxhls/classnames':
+        specifier: ^0.0.10
+        version: 0.0.10
 
 packages:
 
@@ -1154,6 +1158,9 @@ packages:
 
   '@vue/shared@3.5.11':
     resolution: {integrity: sha512-W8GgysJVnFo81FthhzurdRAWP/byq3q2qIw70e0JWblzVhjgOMiC2GyovXrZTFQJnFVryYaKGP3Tc9vYzYm6PQ==}
+
+  '@xxhls/classnames@0.0.10':
+    resolution: {integrity: sha512-Ys9csrcOP4QYDnU6zrJXjRFDDvt8D+rt6mX/ZfKXlHQOJd+S4rwXPF3i9FvG/98b0qgMguxxnvixxveqqgKvLA==}
 
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
@@ -4316,6 +4323,8 @@ snapshots:
       typescript: 5.6.2
 
   '@vue/shared@3.5.11': {}
+
+  '@xxhls/classnames@0.0.10': {}
 
   accepts@1.3.8:
     dependencies:
