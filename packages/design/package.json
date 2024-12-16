@@ -1,0 +1,11 @@
+{
+	"name": "@tmp/design",
+	"version": "0.0.1",
+	"main": "index.ts",
+	"exports": {
+		".": {
+			"import": "./index.ts"
+		},
+		"./css": "./index.css"
+	}
+}
