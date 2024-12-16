@@ -6,7 +6,7 @@
 		".": {
 			"import": "./index.ts"
 		},
-		"./css": "./index.css"
+		"./css": "./src/styles/index.css"
 	},
 	"dependencies": {
 		"@xxhls/classnames": "^0.0.10"

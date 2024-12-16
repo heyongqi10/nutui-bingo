@@ -1,3 +1,6 @@
-import "./index.css";
+import "./src/styles/index.css";
+import GiftBox from "./src/components/GiftBox";
 
-export * from "./src/components/gift-box/index.ts";
+export {
+  GiftBox,
+};

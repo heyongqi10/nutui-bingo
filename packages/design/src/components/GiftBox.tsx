@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import cls from '@xxhls/classnames'
 
-export const Index: React.FC = () => {
+const GiftBox: React.FC = () => {
 
     const contentRef = useRef<HTMLDivElement>(null);
     const activeRef = useRef<boolean>(false);
@@ -52,3 +52,5 @@ export const Index: React.FC = () => {
         </>
     );
 };
+
+export default GiftBox;

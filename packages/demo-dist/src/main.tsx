@@ -1,5 +1,5 @@
-import "./dist/style.css";
-import { GiftBox } from "./dist";
+import "../../../dist/style.css";
+import { GiftBox } from "../../../dist";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 

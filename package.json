@@ -18,8 +18,8 @@
     "./css": "./dist/style.css"
   },
   "scripts": {
-    "dev:demo": "cd packages/demo && npm run dev",
-    "dev:demo-dist": "npm run build && cp -r ./dist ./packages/demo-dist/src/ && cd packages/demo-dist && npm run dev",
+    "dev": "cd packages/demo && npm run dev",
+    "dev:dist": "npm run build && cd packages/demo-dist && npm run dev",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
@@ -42,8 +42,7 @@
     "stylelint-order": "6.0.4",
     "typescript": "5.6.2",
     "vite": "5.4.8",
-    "vite-plugin-dts": "4.2.3",
-    "vitepress": "^1.5.0"
+    "vite-plugin-dts": "4.2.3"
   },
   "dependencies": {
     "react": "18.3.1",
